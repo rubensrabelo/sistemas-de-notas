@@ -1,7 +1,10 @@
 package io.github.rubensrabelo.ms.note.application.dto.note;
 
+import jakarta.validation.constraints.Size;
+
 public class NoteUpdateDTO {
 
+    @Size(max = 50, message = "Title must be at most 50 characters")
     private String title;
     private String content;
 
